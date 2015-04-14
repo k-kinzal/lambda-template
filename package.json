@@ -1,0 +1,49 @@
+{
+  "name": "lambda-template",
+  "version": "1.0.0",
+  "description": "Modern AWS Lambda project configuration.",
+  "author": "k-kinzal",
+  "license": "MIT",
+  "private": true,
+  "main": "src/index.js",
+  "engines": {
+    "node": ">= 0.12.0"
+  },
+  "scripts": {
+    "test": "grunt test",
+    "e2e": "grunt e2e",
+    "debug": "grunt debug",
+    "remote": "grunt run",
+    "local": "grunt run:local",
+    "clean": "grunt clean",
+    "create-stack": "grunt create-stack",
+    "delete-stack": "grunt delete-stack",
+    "package": "grunt package"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.1.23",
+    "bluebird": "^2.9.24",
+    "grunt": "^0.4.5",
+    "grunt-contrib-compress": "^0.13.0",
+    "grunt-contrib-jshint": "^0.11.1",
+    "grunt-env": "^0.4.4",
+    "grunt-lambda-log": "^1.0.0",
+    "grunt-lambda-runner": "^0.1.1",
+    "grunt-lambda-upload": "^0.3.4",
+    "grunt-mocha-test": "^0.12.7",
+    "grunt-regarde": "^0.1.1",
+    "grunt-template": "^0.2.3",
+    "grunt-thin-aws": "0.1.4",
+    "grunt-wait": "^0.1.0",
+    "jshint-stylish": "^1.0.1",
+    "lambda-handler": "^0.2.1",
+    "lambda-logs": "0.0.3",
+    "mocha": "^2.2.4",
+    "power-assert": "^0.10.2",
+    "sinon": "^1.14.1",
+    "uuid": "^2.0.1"
+  },
+  "dependencies": {
+    "config": "^1.12.0"
+  }
+}

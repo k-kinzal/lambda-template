@@ -1,0 +1,42 @@
+{
+  "bitwise": false,
+  "immed": true,
+  "newcap": true,
+  "noarg": true,
+  "node": true,
+  "noempty": true,
+  "nonew": true,
+  "trailing": true,
+  "maxlen": 200,
+  "boss": true,
+  "eqnull": true,
+  "expr": true,
+  "globalstrict": true,
+  "laxbreak": true,
+  "loopfunc": true,
+  "sub": true,
+  "undef": true,
+  "indent": 2,
+  "globals": {
+    // node
+    "require": true,
+    // lambda
+    "module.handler": true,
+  	// grunt
+  	"grunt": true,
+  	"module": true,
+    // jasmine
+    "afterEach": false,
+    "beforeEach": false,
+    "describe": false,
+    "expect": false,
+    "jasmine": false,
+    "spyOn": false,
+    "spyOnEvent": false,
+    "waitsFor": false,
+    "it": false,
+  	// other
+    "Promise" : true,
+  	"console": true
+  }
+}

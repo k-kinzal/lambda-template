@@ -1,0 +1,19 @@
+{
+  "Records": [
+    {
+      "kinesis": {
+          "partitionKey": "shardId-000000000001",
+          "kinesisSchemaVersion": "1.0",
+          "data": "hoge",
+          "sequenceNumber": "49547297492011089477978836236636498686637790666986356738"
+      },
+      "eventSource": "aws:kinesis",
+      "eventID": "shardId-000000000000:49547297492011089477978836236636498686637790666986356738",
+      "invokeIdentityArn": "arn:aws:iam::125043710017:role/lambda_invoke_role",
+      "eventVersion": "1.0",
+      "eventName": "aws:kinesis:record",
+      "eventSourceARN": "arn:aws:kinesis:us-east-1:125043710017:stream/examplestream",
+      "awsRegion": "us-east-1"
+    }
+  ]
+}

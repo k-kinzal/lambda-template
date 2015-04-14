@@ -1,0 +1,4 @@
+.tmp/
+config/local.json
+dist/
+node_modules/

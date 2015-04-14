@@ -1,0 +1,39 @@
+language:
+- node_js
+node_js:
+- '0.12'
+sudo: false
+cache:
+  directories:
+  - node_modules
+branches:
+  only:
+  - master
+before_install:
+- npm install -g grunt-cli
+before_script:
+- npm run create-stack
+script:
+- npm run test
+- npm run local
+- npm run remote
+- npm run e2e
+after_script:
+- npm run delete-stack
+after_success:
+- npm run package
+deploy:
+  provider: releases
+  api_key:
+    secure: UQcCN2alTi/ofXQCF06SYs1ip1WYEn2CMN193oUFKuuxRdxnpRq2UpgEXOVskYmcm0tDr7R/EBS/vnWtkYamjNEmkIQyotxPkl1+hTxh7Sxvfx9yLrsqxiCQ+HPbHipiejTTYa7MC+ma8dOUocrtcmjDPzNRhI0OiozFwTDTVjk=
+  file: dist/archive.zip
+  skip_cleanup: true
+  on:
+    repo: k-kinzal/lambda-template
+    tags: true
+env:
+  global:
+  - AWS_DEFAULT_REGION=us-east-1
+  - AWS_REGION=us-east-1
+  - secure: KbwueMJ8uQwPE7PH3JILvTOgPibWnyRlmrK7VKwaeUhFalZCcl+qvJHNK70QoNybuYk3X1/k1jryVmlclSn693T2owo3oOB1J1FmHRopYB4rXduuHN0cH5gc2mTjzbtDno0YnWYHiyNsyg+uZ6SzI2vqHKDQ33VpYUd51T2Mjew=
+  - secure: VmPmFhMPAG2RidSCXv6g+t2SDIKwYxC9g8jqblYCYyecE0URgtFKhrzyrt0DORbhHA886lLJM9rQyb4824hy3odD5Up9eGV4P03VvGzdN+TFndcjaAimM5rVZHVVNQ+UjBWbtap/CuQHRRbFIaa5iKsrj/Z/f8SjoFmw9r4nLT8=

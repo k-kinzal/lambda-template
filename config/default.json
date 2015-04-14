@@ -1,0 +1,4 @@
+{
+  "stackId": "arn:aws:cloudformation:local",
+  "stackName": "lambda-template-debug"
+}

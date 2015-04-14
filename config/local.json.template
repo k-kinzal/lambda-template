@@ -1,0 +1,4 @@
+{
+  "stackId": "<%- stackId %>",
+  "stackName": "<%- stackName %>"
+}
